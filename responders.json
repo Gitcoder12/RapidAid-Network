@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "city": "Hyderabad",
+  "responders": [
+    { "id": "R001", "name": "Arjun K.", "type": "bike", "lat": 17.4486, "lng": 78.3762, "available": true, "first_aid_certified": true, "rating": 4.8 },
+    { "id": "R002", "name": "Priya M.", "type": "scooter", "lat": 17.4374, "lng": 78.4487, "available": true, "first_aid_certified": true, "rating": 4.9 },
+    { "id": "R003", "name": "Suresh V.", "type": "car", "lat": 17.4314, "lng": 78.4081, "available": false, "first_aid_certified": true, "rating": 4.7 }
+  ],
+  "support_points": [
+    { "id": "SP001", "name": "Hotel Green Park", "type": "hotel", "lat": 17.4450, "lng": 78.3800, "capacity": 3, "available": true },
+    { "id": "SP002", "name": "Apollo Clinic Gachibowli", "type": "clinic", "lat": 17.4239, "lng": 78.3501, "capacity": 5, "available": true }
+  ],
+  "ambulances": [
+    { "id": "A001", "operator": "Apollo Hospitals", "lat": 17.4314, "lng": 78.4081, "available": true, "eta_min": 8 },
+    { "id": "A002", "operator": "CATS Ambulance", "lat": 17.4399, "lng": 78.4983, "available": true, "eta_min": 12 }
+  ]
+}
