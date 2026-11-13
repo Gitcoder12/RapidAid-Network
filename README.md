@@ -1,42 +1,135 @@
 # RapidAid Network
 
-**A small JavaScript prototype for severity-based emergency resource dispatch.**
+RapidAid Network is a multi-layer emergency response system designed to reduce response time during emergencies by combining fast responders, temporary support locations, and ambulance coordination.
 
-[![License](https://img.shields.io/badge/license-see%20LICENSE-lightgrey)](LICENSE)
+---
 
-RapidAid Network explores how a dispatch layer could identify nearby available responders, support points, and ambulances based on an emergency's coordinates and severity.
+## Overview
 
-## Features
+RapidAid Network provides a structured approach to emergency response by integrating three key components:
 
-- Calculate straight-line distance with the Haversine formula.
-- Select the nearest available resource from a supplied list.
-- Apply different dispatch rules for minor, moderate, and critical incidents.
-- Return a structured response object for downstream systems.
+1. Fast responders using bikes, scooters, or cars
+2. Temporary support points such as hotels or local facilities
+3. Ambulance services for full medical care
+
+The system ensures that immediate assistance is available within minutes, even before professional medical services arrive.
+
+---
+
+## Core Features
+
+* Real-time emergency reporting
+* Nearest responder dispatch system
+* Location-based support point identification
+* Ambulance coordination
+* Multi-layer response handling
+* Simple and intuitive interface
+
+---
+
+## System Components
+
+### 1. Fast Responders
+
+Nearby trained individuals equipped with basic first aid kits who can reach the location quickly.
+
+### 2. Support Points
+
+Temporary locations (e.g., hotels, lodges, small clinics) used for stabilization and safe waiting.
+
+### 3. Ambulance Services
+
+Professional medical units responsible for advanced treatment and transport.
+
+---
+
+## How It Works
+
+1. User reports an emergency
+
+2. System captures location
+
+3. Dispatches:
+
+   * Nearest responder
+   * Nearest support point (if required)
+   * Ambulance
+
+4. Responder arrives first and provides basic aid
+
+5. Patient is stabilized or moved to support point
+
+6. Ambulance completes medical care
+
+---
+
+## Decision Logic
+
+* Critical cases → Responder + Ambulance
+* Moderate cases → Responder + Support Point + Ambulance
+* Minor cases → Responder + Support Point
+
+---
 
 ## Tech Stack
 
-JavaScript · Node.js built-in modules · JSON
+* Frontend: HTML, CSS, JavaScript
+* Backend (planned): Node.js / Python
+* APIs (planned): Maps and geolocation services
 
-## Quick Start
+---
 
-```bash
-git clone https://github.com/Gitcoder12/RapidAid-Network.git
-cd RapidAid-Network
-node -e "const data=require('./responders.json'); const {dispatch,SEVERITY}=require('./dispatch_logic'); console.log(dispatch(data,{lat:17.43,lng:78.40,severity:SEVERITY.CRITICAL}));"
+## Future Enhancements
+
+* Real-time tracking of responders and ambulances
+* Smart routing and traffic-based optimization
+* Integration with hospitals and emergency networks
+* Mobile application support
+* Data-driven response optimization
+
+---
+
+## Research Potential
+
+This project can be extended into research areas such as:
+
+* Emergency response optimization
+* Resource allocation systems
+* Smart city infrastructure
+* Distributed response networks
+
+---
+
+## Installation
+
+```bash id="e9kgmw"
+git clone https://github.com/your-username/rapidaid-network.git
+cd rapidaid-network
 ```
 
-## Project Structure
+Open `index.html` in your browser.
 
-```text
-RapidAid-Network/
-├── dispatch_logic.js # Distance and dispatch selection logic
-└── responders.json   # Sample responders, support points, and ambulances
-```
+---
 
-## Scope and Limitations
+## Author
 
-This repository currently contains dispatch logic and sample data only. It is not an emergency service, does not contact responders or ambulance operators, and does not provide medical triage. The returned nearest resource is only as accurate as the supplied coordinates and availability flags. In a real emergency, contact local emergency services directly.
+Dharavath Satvik
+
+---
 
 ## License
 
-See [LICENSE](LICENSE).
+MIT License
+
+
+---
+
+## AI-maintained project notes (secondary — 2026-11-13)
+
+This section supplements the maintainer-authored README above. The original text has been restored verbatim from Git-history baseline `2a2c59dcc43d74a1731825807d274c3cfe6341d5`; this addendum does not replace or certify the original claims.
+
+- The source tree, runtime data and tests are the implementation source of truth. Roadmap items, draft PRs and AI-generated descriptions are not shipped features by themselves.
+- Preserve existing maintainer-provided data. Never replace real data with synthetic or placeholder records. Clearly label and isolate test fixtures.
+- Mark unverified sources, IDs, records, metrics and external claims as unknown/unverified instead of guessing.
+- Verify setup, execution, test commands and public claims against the exact current commit before using this project in a job, research or academic application.
+- See [MODEL_AUDIT_ROUTER.md](MODEL_AUDIT_ROUTER.md) for the independent model review and merge gate.
