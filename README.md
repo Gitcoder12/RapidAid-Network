@@ -40,3 +40,27 @@ This repository currently contains dispatch logic and sample data only. It is no
 ## License
 
 See [LICENSE](LICENSE).
+
+---
+
+## Project handbook
+
+- [Activity log](ACTIVITY_LOG.md)
+- [Feature upgrade plan](FEATURE_UPGRADE_PLAN.md)
+- [Company and team fit](COMPANY_FIT.md)
+- [Beginner and technical README draft](README_ADDENDUM_DRAFT.md)
+- [README quality checklist](README_QUALITY_CHECKLIST.md)
+- [Contributing](CONTRIBUTING.md)
+- [Agent instructions](AGENTS.md) · [Agent skills](SKILLS.md)
+
+## Understanding the project
+
+### In plain language
+
+A small simulation that chooses a nearby available response resource based on an incident location and a severity label.
+
+### Technical and research view
+
+JavaScript/Node.js prototype using Haversine distance and rule-based selection from supplied responder, support-point and ambulance records. It is not connected to emergency services and must not be used to dispatch real responders or determine medical priority.
+
+See [FEATURE_UPGRADE_PLAN.md](FEATURE_UPGRADE_PLAN.md), [ACTIVITY_LOG.md](ACTIVITY_LOG.md), [COMPANY_FIT.md](COMPANY_FIT.md) and [CONTRIBUTING.md](CONTRIBUTING.md) for the roadmap and collaboration workflow.
