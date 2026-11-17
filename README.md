@@ -133,3 +133,22 @@ This section supplements the maintainer-authored README above. The original text
 - Mark unverified sources, IDs, records, metrics and external claims as unknown/unverified instead of guessing.
 - Verify setup, execution, test commands and public claims against the exact current commit before using this project in a job, research or academic application.
 - See [MODEL_AUDIT_ROUTER.md](MODEL_AUDIT_ROUTER.md) for the independent model review and merge gate.
+
+---
+
+## Engineering Audit & Handover — 2026-11-17
+
+**Review scope:** default branch `main`; static inspection of `dispatch_logic.js`. Runtime tests were not executed.
+
+### Confirmed findings
+- `dispatch()` destructures emergency coordinates and severity and immediately searches `data.responders`, `data.support_points`, and `data.ambulances`; the inspected function does not validate the input object, arrays, coordinate ranges, or severity before use.
+- The nearest-resource calculation assumes resource coordinates are valid numbers and that `available` is meaningful.
+- If no eligible resource exists, the corresponding response field is `null`. A production caller must handle this explicitly.
+- This module is a selection/decision helper; it does not itself provide live responder tracking, ambulance integration, or guaranteed emergency response.
+
+### Next actions
+1. Validate and normalize emergency/resource coordinates, severity, and resource-list schemas.
+2. Define explicit no-resource and partial-dispatch outcomes, with safe escalation behavior.
+3. Add tests for each severity, invalid input, unavailable resources, ties, and geographic edge cases.
+
+**Verification status:** dispatch module inspection only; integration, safety behavior, and tests remain unverified. This prototype must not be relied on as an operational emergency-dispatch service.
