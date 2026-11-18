@@ -152,3 +152,10 @@ This section supplements the maintainer-authored README above. The original text
 3. Add tests for each severity, invalid input, unavailable resources, ties, and geographic edge cases.
 
 **Verification status:** dispatch module inspection only; integration, safety behavior, and tests remain unverified. This prototype must not be relied on as an operational emergency-dispatch service.
+
+---
+
+## Examples Used
+- Dispatching the nearest responder to a road accident
+- Coordinating a support point and ambulance
+- Handling a case when no responder is available
