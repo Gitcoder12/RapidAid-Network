@@ -159,3 +159,27 @@ This section supplements the maintainer-authored README above. The original text
 - Dispatching the nearest responder to a road accident
 - Coordinating a support point and ambulance
 - Handling a case when no responder is available
+
+
+---
+
+## Comparison with Existing Open-Source Projects
+
+RapidAid Network is described as a layered emergency-response coordination concept involving nearby responders, temporary support points and ambulance services. These projects are adjacent emergency-management references, not direct equivalents or proof of operational readiness.
+
+| Project | Established focus | Relationship to RapidAid Network |
+|---|---|---|
+| [Sahana Eden](https://github.com/sahana/eden) | Humanitarian response and disaster-management information systems | A broad, mature emergency-management platform; RapidAid's proposed focus is the last-mile coordination of nearby first responders, support points and ambulance escalation. |
+| [OpenMRS](https://github.com/openmrs/openmrs-core) | Open-source medical-record platform | Healthcare information infrastructure rather than emergency dispatch; useful as a reference for structured patient and care data boundaries. |
+| [OpenStreetMap](https://github.com/openstreetmap/openstreetmap-website) | Collaborative geographic data and mapping | A possible mapping/data foundation, not a responder-dispatch or clinical-response system. |
+
+### Where RapidAid is different
+- **Layered response model:** the concept coordinates a nearby responder, an interim support location and professional ambulance care as distinct resources.
+- **Early-arrival objective:** it is framed around reducing the gap before professional medical transport arrives.
+- **Explicit escalation logic:** the README describes severity-dependent combinations of resources, which can be developed into a transparent dispatch policy.
+
+### Where established projects are stronger
+Sahana Eden and established emergency-service systems have far greater operational scope and maturity. RapidAid's README describes planned backend and mapping integrations; it does not demonstrate live dispatch, trained responder availability, ambulance integration or clinical effectiveness.
+
+### Safety and evidence requirements
+This project must remain a prototype until reviewed with emergency-care professionals and relevant authorities. Never imply that an app replaces emergency services or guarantees assistance. Define responder credentials, consent, location privacy, dispatch liability, escalation and fail-safe behavior before any live pilot. Any response-time improvement must be measured in an approved, controlled evaluation.
