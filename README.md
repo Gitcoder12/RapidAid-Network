@@ -100,14 +100,11 @@ This project can be extended into research areas such as:
 
 ---
 
-## Installation
+## Run status
 
-```bash id="e9kgmw"
-git clone https://github.com/your-username/rapidaid-network.git
-cd rapidaid-network
-```
+**No website or browser app is currently available in this repository.** The current source contains a dispatch-logic module (`dispatch_logic.js`) and a Node package entry point; it does not contain the `index.html` page referenced by the old instructions or a running web server. Do not try to open this repository as a website yet.
 
-Open `index.html` in your browser.
+The dispatch module exports decision logic for integration by a future application. A browser interface, server/API, and a runnable demonstration need to be implemented before this project can be opened as a site.
 
 ---
 
